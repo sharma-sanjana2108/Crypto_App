@@ -1,0 +1,521 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+/* *****Navbar******/
+
+#logo-img {
+  width: 85px;
+}
+
+#trending {
+  background-color: #f0de36;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#trending:hover {
+  background-color: #f3eac2;
+}
+
+#logout-btn {
+  background-color: red;
+  font-size: 13px;
+}
+
+#logout-btn:hover {
+  background-color: #e21818;
+  font-size: 13px;
+}
+
+#login-btn {
+  background-color: #ba704f;
+  font-size: 13px;
+  color: white;
+}
+
+#login-btn:hover {
+  background-color: #fc6736;
+  font-size: 13px;
+}
+
+#register-btn {
+  background-color: #e3651d;
+  font-size: 13px;
+  color: white;
+  margin-left: 15px;
+}
+
+#register-btn:hover {
+  background-color: #fc6736;
+  font-size: 13px;
+}
+
+/*************hero-section*****************/
+
+.hero-section {
+  background-color: black;
+  height: 100vh;
+}
+
+.hero-part {
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-part h3 {
+  font-size: 60px;
+}
+
+.hero-part h5 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+#investing {
+  text-decoration: none;
+  position: relative;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #fff;
+  width: 12em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 300%;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+#investing:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+#investing:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+
+#investing:hover::before {
+  filter: blur(20px);
+}
+
+#investing:active {
+  background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+
+/*************why us**************/
+
+#w1 {
+  width: 10%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid #00204a;
+}
+
+#w2 {
+  width: 10%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid #00204a;
+}
+
+#w3 {
+  width: 10%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid #00204a;
+}
+
+#w4 {
+  width: 10%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 100%;
+  border: 5px solid #00204a;
+}
+
+/*************coin container**************/
+
+.spinner {
+  --size: 30px;
+  --first: #005bba;
+  --second: #fed500;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: spin 3s linear infinite;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  width: var(--size);
+  height: var(--size);
+  border: 4px solid var(--first);
+  border-top: 4px solid var(--second);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spinRing 1.5s ease-out infinite;
+  box-shadow: 0 0 10px var(--first);
+}
+
+.spinner::before {
+  filter: blur(10px);
+}
+
+@keyframes spinRing {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*************Footer**************/
+
+.lower-footer {
+  border-top: 2px solid gray;
+}
+
+span h6 {
+  color: gray;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: center;
+  margin-block: 18px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.support-part {
+  text-align: center;
+}
+
+/*************Login**************/
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 60px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(to right, rgb(248, 234, 32), rgb(39, 40, 46));
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.login {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .login-btn {
+  margin-top: 25px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  border: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.form label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.form button:hover {
+  box-shadow: 2px 2px 12px white;
+}
+
+.input {
+  height: 30px;
+  outline: none;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 2px 2px 12px inset black;
+  background: linear-gradient(to right, rgb(248, 234, 32), rgb(39, 40, 46));
+}
+
+.span:hover {
+  font-weight: bold;
+}
+
+.color {
+  color: white;
+}
+.color span {
+  font-weight: 700;
+}
+
+.align {
+  text-align: center;
+}
+
+/*************Register**************/
+
+.register-container {
+  margin-block: 40px;
+}
+.container {
+  max-width: 300px;
+  background-color: #f1f7fe;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+form .head {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+form .head span {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: black;
+}
+
+form .head p {
+  font-size: 1.1rem;
+  color: #7c6666;
+}
+
+form .inputs {
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  margin: 0.5rem;
+  border-radius: 8px;
+  border-bottom: none;
+  outline: 0;
+}
+
+form .inputs input {
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.299);
+  font-weight: 200;
+}
+
+form button {
+  background-color: #4287ef;
+  color: white;
+  width: 100%;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 0;
+  overflow: hidden;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+form button:hover {
+  background-color: #005ce6;
+}
+
+.form-footer {
+  background-color: #e0ecfb;
+  padding: 16px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.form-footer a {
+  font-weight: bolder;
+  color: #0066ff;
+  transition: all 3s ease-in-out;
+}
+
+.form-footer a:hover {
+  color: #005ce6;
+}
+
+/*********Responsive design**************/
+
+@media (max-width: 768px) {
+  /*********Navbar**************/
+
+  .responsive-navbar {
+    width: 100%;
+  }
+
+  /**********Hero part******/
+
+  .hero-part {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-part h3 {
+    font-size: 35px;
+  }
+
+  .hero-part h5 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    margin-top: 5px;
+  }
+
+  #blue-img {
+    width: 70%;
+    margin-left: 35px;
+    margin-top: 38px;
+  }
+
+  #investing {
+    margin-top: 20px;
+  }
+
+  /**********Why US******/
+
+  .why-section {
+    font-size: 30px;
+    padding-top: 100px;
+  }
+
+  #w1 {
+    width: 16%;
+  }
+  #w2 {
+    width: 16%;
+  }
+  #w3 {
+    width: 16%;
+  }
+  #w4 {
+    width: 16%;
+  }
+
+  /**********Portfolio******/
+
+  .portfolio-single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .portfolio-steps {
+    padding-bottom: 20px;
+  }
+
+  /**********FAQ******/
+
+  .faq-header {
+    font-size: 10px;
+  }
+
+  /**********Footer******/
+
+  .lower-footer {
+    border-top: 2px solid gray;
+    width: 100%;
+  }
+
+  .services-footer {
+    display: none;
+  }
+
+  .support-footer {
+    display: none;
+  }
+
+  .buycrypto-footer {
+    display: none;
+  }
+}
