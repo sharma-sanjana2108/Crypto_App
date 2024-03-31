@@ -10,7 +10,7 @@ import Footer from './Components/Footer';
 import CoinContainer from './Components/CoinContainer';
 import WhyUs from './Components/WhyUs';
 import Portfolio from './Components/Portfolio';
-import Faq from './Components/faq';
+import Faq from './Components/Faq';
 import HeroSection from './Components/HeroSection';
 
 
