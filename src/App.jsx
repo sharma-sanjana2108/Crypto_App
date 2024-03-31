@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CardDetail from './Components/CardDetail';
 import CoinCard from './Components/CoinCard';
 import Footer from './Components/Footer';
-
 import CoinContainer from './Components/CoinContainer';
 import WhyUs from './Components/WhyUs';
 import Portfolio from './Components/Portfolio';

@@ -3,7 +3,7 @@ import '../styles/heroSection.css'
 import banner6 from "../assets/banner6.jpg"
 import WhyUs from './WhyUs'
 import Portfolio from './Portfolio'
-import Faq from './faq'
+import Faq from './Faq'
 import { Link } from 'react-router-dom'
 
 
