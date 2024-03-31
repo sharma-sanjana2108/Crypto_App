@@ -1,4 +1,5 @@
 import { Container, Typography } from "@mui/material";
+import '../styles/portfolio.css'
 import React from "react";
 
 const Portfolio = () => {
@@ -6,9 +7,9 @@ const Portfolio = () => {
     <>
       <Container
         maxWidth={false}
-        sx={{ backgroundColor: "black", paddingBlock: "20px" }}
+        sx={{paddingBlock: 8 }}
       >
-        <Typography
+        <Typography className="portfolio-header"
           color={"white"}
           bgcolor={"black"}
           textAlign={"center"}

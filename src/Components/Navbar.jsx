@@ -1,29 +1,22 @@
 import { AppBar, Box, Button, Hidden, List, ListItem, Toolbar, Typography } from '@mui/material'
+import '../styles/navbar.css'
 import React from 'react'
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 import { Link } from 'react-router-dom'
 import coinlogo from '../assets/coinlogo.png'
-import { useDispatch, useSelector } from 'react-redux'
-import { logoutUser } from '../../features/crypto/cryptoSlice'
 
 
 const Navbar = () => {
 
-  const { user } = useSelector((state) => state.crypto);
-
-  const dispatch = useDispatch()
-
-  const handleLogout = () => {
-    dispatch(logoutUser())
-  }
 
   return (
-    <Box>
+    <Box className='responsive-navbar'>
 
-      <AppBar position='static' color='primary' sx={{ backgroundColor: "#000001", fontFamily: 'Lato, sans-serif' }}>
-        <Toolbar className='responsive-navbar'>
+      <AppBar sx={{ backgroundColor: "#000001", fontFamily: 'Lato, sans-serif' }}>
+        <Toolbar >
 
 
-          <Typography sx={{ flexGrow: 1 }} variant='h5'><Link to={'/'} style={{textDecoration: 'none', color: 'white'}}>
+          <Typography sx={{ flexGrow: 1 }} variant='h5'><Link to={'/'} style={{color: 'white'}}>
             <img id='logo-img' src={coinlogo} alt="" />
             CRYPTOFY
           </Link>
@@ -40,26 +33,11 @@ const Navbar = () => {
         </List>
        </Hidden>
 
-        
-        
       
-        {
-            user ? (
-              <>
               <Link to={"/coincontainer"}>
-              <Button sx={{marginRight: '18px'}} id='trending' variant='contained'>Top Trending Coins</Button>
+              <Button id='trending'><CurrencyBitcoinIcon/>Top Trending Coins</Button>
             </Link>
-              <Button id='logout-btn' variant='outlined ' color='error' onClick={handleLogout}>Logout</Button>
-              </>
-            ) : (
-              <>
-                <Link to={"/login"}><Button id='login-btn' variant="contained ">Login</Button>
-                </Link>
-
-              </>
-            )
-          }
-        
+  
 
         </Toolbar>
 

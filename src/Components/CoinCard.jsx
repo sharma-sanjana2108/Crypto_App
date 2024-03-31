@@ -1,5 +1,6 @@
 import { Grid, Typography, CardMedia, CardContent, CardActions, Card, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
+import '../styles/coinCard.css'
 
 const CoinCard = ({coin}) => {
 
@@ -7,25 +8,25 @@ const CoinCard = ({coin}) => {
  
   return (
 
-    <Grid item lg={4} md={6} sm={12}>
+    <Grid item lg={4} md={4} sm={6} xs={12}>
        
-        <Card>
-      <CardMedia sx={{ height: 140 }} image={large} title="green iguana"/>
-      <CardContent>
+        <Card sx={{backgroundColor: "black"}}>
+      <CardMedia className='card-img' image={large} title="green iguana"/>
+      <CardContent className='card-content'>
         <Typography gutterBottom variant="h5" component="div">
           {symbol}
         </Typography>
-        <Typography sx={{ fontSize: "16px", color: "black"}} variant="body2" color="text.secondary">
+        <Typography sx={{ fontSize: "20px"}} variant="body2">
           {name}
         </Typography>
       </CardContent>
-      <CardActions>
+  
      
         <Link to={`/learnmore/${coin_id}`}>
-        <Button sx={{fontWeight: "Bold", fontSize: "15px"}} size="small">Learn More</Button>
+        <Button id='learn-more' sx={{fontWeight: "Bold", fontSize: "15px"}} size="small">Learn More</Button>
         </Link>
        
-      </CardActions>
+   
     </Card>
       </Grid>
       

@@ -1,0 +1,55 @@
+.card-img{
+    width: 100%;
+    height: 50vh;
+}
+
+.card-content{
+    background-color: black;
+    color: white;
+}
+
+
+#learn-more:hover{
+    background-color: white;
+    padding-inline: 10px;
+}
+
+
+/***********Responsive Design******** */
+@media (max-width: 768px) {
+    .card-img{
+        width: 100%;
+        height: 50vh;
+    }
+
+}
+
+
+/***********Card Detail******** */
+
+.single-container{
+    background: #FFEFBA;
+background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+background: linear-gradient(to right, #FFFFFF, #FFEFBA); 
+
+}
+#single-coin{
+    width: 50%;
+    height: 60vh;
+}
+
+/***********Responsive Design******** */
+@media (max-width: 768px) {
+.single-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 18px;
+}
+
+#single-coin{
+    width: 100%;
+    height: 60vh;
+}
+
+
+}

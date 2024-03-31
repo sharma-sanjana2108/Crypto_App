@@ -1,0 +1,26 @@
+
+#logo-img {
+    width: 85px;
+  }
+  
+  #trending {
+    background-color: #f0de36;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  #trending:hover {
+    background-color: #f3eac2;
+  }
+  
+  /*********Responsive design**************/
+
+  @media (max-width: 768px) {
+
+  
+    .responsive-navbar {
+      width: 100%;
+    }
+
+}

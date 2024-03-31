@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
+import '../styles/whyUs.css'
 import React from 'react'
 import w1 from "../assets/w1.png"
 import w2 from "../assets/w2.png"
@@ -8,9 +9,9 @@ import w4 from "../assets/w4.png"
 
 const WhyUs = () => {
   return (
-    <>
+  
 
-    <Container sx={{ backgroundColor: 'black', color: 'white', marginTop: '5px'  }} >
+    <Container className='why-container'>
 
         <Typography className='why-section' textAlign={"center"} variant='h3'>
 
@@ -21,7 +22,7 @@ const WhyUs = () => {
         <Grid>
 
       <Grid  item>
-        <Box  textAlign={"center"} sx={{marginTop: '40px'}}>
+        <Box  textAlign={"center"} sx={{marginTop: 8}}>
          <img id='w1' src={w1} alt="" />
          <Typography textAlign={"center"} variant='h4'>
          Expert Management
@@ -34,7 +35,7 @@ const WhyUs = () => {
 
       <Grid item>
         <Box textAlign={"center"} sx={{padding: 2 }} >
-           <img id='w3' src={w3} alt="" />
+           <img id='w1' src={w3} alt="" />
            <Typography textAlign={"center"} variant='h4'>
            Instant Trading
         </Typography>
@@ -45,7 +46,7 @@ const WhyUs = () => {
       </Grid>
       <Grid item>
         <Box textAlign={"center"} sx={{padding: 2 }}>
-        <img id='w2' src={w2} alt="" />
+        <img id='w1' src={w2} alt="" />
         <Typography textAlign={"center"}  variant='h4'>
         Secure Investment
         </Typography>
@@ -58,7 +59,7 @@ const WhyUs = () => {
       
       <Grid item>
         <Box textAlign={"center"} sx={{padding: 2 }} >
-        <img id='w4' src={w4} alt="" />
+        <img id='w1' src={w4} alt="" />
         <Typography textAlign={"center"} variant='h4'>
         Happy Customers
         </Typography>
@@ -70,7 +71,7 @@ const WhyUs = () => {
 
     </Container>
       
-    </>
+  
   )
 }
 

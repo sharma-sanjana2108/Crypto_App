@@ -1,27 +1,14 @@
 import { Button, Container, Typography, colors } from '@mui/material'
-import React, { useEffect } from 'react'
+import '../styles/heroSection.css'
 import banner6 from "../assets/banner6.jpg"
 import WhyUs from './WhyUs'
 import Portfolio from './Portfolio'
 import Faq from './faq'
-import { Link, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+
 
 
 const HeroSection = () => {
-
-  const {user} = useSelector((state) => state.crypto)
-
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if(!user){
-      navigate('/login')
-    }
-  }, [user])
-
-
-
 
   return (
     <>

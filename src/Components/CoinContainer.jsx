@@ -3,16 +3,15 @@ import CoinCard from './CoinCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { Grid } from '@mui/material'
 import { getCoins } from '../../features/crypto/coinSlice'
-import { useNavigate } from 'react-router-dom'
+
 
 const CoinContainer = () => {
 
     const {coins, isLoading, isError, isSuccess} = useSelector(state => state.tradeCoins)
 
-    const {user} = useSelector((state) => state.crypto)
 
     const dispatch = useDispatch()
-    const navigate = useNavigate()
+
 
     const getCoinsData = () => {
       dispatch(getCoins())
@@ -22,9 +21,7 @@ const CoinContainer = () => {
       getCoinsData()
     }, [])
 
-    if(!user){
-navigate('/login')
-    }
+
 
     if (isLoading) {
       return (
@@ -36,9 +33,9 @@ navigate('/login')
 
 
   return (
-    <>
+ 
 
-     <Grid container sx={{padding: '60px'}} spacing={2}>
+     <Grid container sx={{padding: 12}} spacing={5}>
 
      {
        coins.map((coin => <CoinCard key={coin.item.coin_id} coin={coin}/> ))
@@ -48,7 +45,7 @@ navigate('/login')
   
     
       
-    </>
+
   )
 }
 

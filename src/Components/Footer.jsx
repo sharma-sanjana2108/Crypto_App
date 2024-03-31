@@ -1,5 +1,6 @@
 import { Box, List, ListItem, Typography } from '@mui/material'
 import { grey } from '@mui/material/colors'
+import '../styles/footer.css'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
